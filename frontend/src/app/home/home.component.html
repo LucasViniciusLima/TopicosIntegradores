@@ -1,0 +1,19 @@
+<h5>{{ 'Faça avaliações de seus jogos favoritos aqui!' | uppercase }}</h5>
+<hr>
+<div class="row">
+    <div *ngFor="let game of gamesTopics let i=index" class="card text-white bg-dark mb-3 px-0 mx-1" style="max-width: 18rem;">
+        <img style="width: 100%" src="https://www.residentevildatabase.com/wp-content/uploads/2018/12/hands-on-re2-remake-december.jpg" class="card-img-top" alt="imagem-do-jogo">
+        <div class="card-body text-center py-2">
+            <div class="card-title fw-bold my-0">{{ game.name }}</div>            
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item text-white bg-transparent">{{ 'Categoria: ' + game.category }}</li>
+            <li class="list-group-item text-white bg-transparent">{{ 'Produtora: ' + game.producer }}</li>
+            <li class="list-group-item text-white bg-transparent">{{ 'Média Avaliações: ' + mediaScore(i) }}</li>
+            <li class="list-group-item text-warning bg-transparent"><a (click)="editItem(game._id)">{{ 'editar' | uppercase }}</a></li>
+        </ul>
+        <div class="card-body text-center">            
+            <a class="btn btn-warning fw-bold" (click)="avaliarItem(game._id)">VER AVALIAÇÕES</a>
+        </div>
+    </div>
+</div>

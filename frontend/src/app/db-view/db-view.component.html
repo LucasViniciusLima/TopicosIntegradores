@@ -1,0 +1,24 @@
+<table class="table table-dark table-hover">
+    <thead>
+        <tr>
+            <th scope="col">N°</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Produtora</th>
+            <th scope="col">Avaliações</th>
+            <th scope="col">Id-BD</th>
+            <th scope="col">Editar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let game of allItens let i=index">
+            <th scope="row">{{ i+1 }}</th>
+            <td>{{ game?.name }}</td>
+            <td>{{ game?.category }}</td>
+            <td>{{ game?.producer }}</td>
+            <td>{{ game?.reviews.length }}</td>
+            <td>{{ game?._id }}</td>
+            <td><a class="text-warning" (click)="editItem(game._id)">Editar</a></td>
+        </tr>
+    </tbody>
+</table>

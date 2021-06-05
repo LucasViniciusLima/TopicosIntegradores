@@ -1,0 +1,35 @@
+<h5>{{ 'editar tópico' | uppercase }}</h5>
+<hr>
+<div class="row">
+    <div class="col-md-4">
+        <div class="row">
+            <img src="../../assets/mares.jpg" alt="cena-jogo" class="mx-auto mx-md-1" style="width:25rem;">
+        </div>        
+    </div>
+    <div class="col-md-8">
+        <div class="row g-3">
+            <div class="col">
+                <input type="text" class="form-control" placeholder="NOME DO JOGO" [(ngModel)]="nome">
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" placeholder="PRODUTORA" [(ngModel)]="produtora">
+            </div>
+        </div>
+        <div class="row g-3">
+            <div class="col">
+                <label for="inputState" class="form-label">Gênero</label>
+                <select id="inputState" class="form-select" #genero>
+                    <option selected>Ação</option>
+                    <option>Aventura</option>
+                    <option>Terror</option>
+                    <option>RPG</option>
+                    <option>FPS</option>
+                    <option>Simulação</option>
+                    <option>Puzzle</option>
+                </select>
+            </div>
+        </div>
+        <button class="btn btn-danger my-4 float-end" (click)="excluirItem()">DELETAR</button>
+        <button class="btn btn-success my-4 mx-3 float-end" (click)="atualizarTopico(genero)">EDITAR TÓPICO</button>        
+    </div>    
+</div>

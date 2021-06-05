@@ -1,0 +1,17 @@
+<img style="width: 100%" src="../../assets/re2.jpg" class="card-img-top" alt="imagem-do-jogo">
+<hr>
+<h5 class="text-danger">NÃO CONCLUIDO</h5>
+<p>Adicionar o atributo review no banco não concluido</p>
+<ul>
+    <li *ngFor="let review of reviews">
+        score: {{ review.score }} descricao: {{ review.description }}
+    </li>
+</ul>
+
+<div class="input-group mb-3">
+    <input class="form-control" placeholder="Nota" #score>
+    <input type="text" class="form-control" placeholder="Descrição" #description>
+    <button class="btn btn-warning fw-bold" (click)="atualizarTopico(score, description)">Adicionar avaliação</button>
+</div>
+
+

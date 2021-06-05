@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/'"><img src="../../assets/icon-home.png" alt="icone-game" class="icon-home"></a>            
+        </li>
+        <li class="nav-item">            
+            <a class="nav-link active" aria-current="page" [routerLink]="'/'">Game Analysis</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/create'">Create Topic</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" [routerLink]="'/db'">Table BD</a>
+        </li>
+    </ul>
+</nav>
+<div class="container py-3">
+    <ng-content></ng-content>
+</div>
